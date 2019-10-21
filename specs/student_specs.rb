@@ -65,7 +65,22 @@ class TestTeam < MiniTest::Test
     assert_equal("MR John", team.coach)
   end
 
+  def test_add_new_player
+    team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
+    team.players.push("Jamie")
+    assert_equal(["henry", "john", "Kyle", "Jamie"], team.players)
+  end
 
+  def test_player_exsists
+    team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
+    assert_equal(true, team.player_exsists)
+  end
+
+  def test_team_won
+    team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
+    team.team_won
+    assert_equal(1,team.points)
+  end
 
 
 
