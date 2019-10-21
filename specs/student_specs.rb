@@ -14,10 +14,21 @@ class TestStudent < MiniTest::Test
     assert_equal("E35", student.get_student_cohort)
   end
 
+  def test_set_student_name
+    student = Student.new("Cameron", "E35", "Ruby")
+    student.set_student_name("Ryan")
+    assert_equal("Ryan", student.get_student_name)
+  end
+
+  def test_set_cohort
+    student = Student.new("Cameron", "E35", "Ruby")
+    student.set_student_cohort("E36")
+    assert_equal("E36", student.get_student_cohort)
+  end
   # def test_set_student_name_and_cohort
   #   student = Student.new("Cameron", "E35", "Ruby")
-  #   student.set_student_name_and_cohort("Ryan")
-  #   assert_equal("Ryan", student.set_student_name_and_cohort)
+  #   student.set_cohort("E36")
+  #   assert_equal("Ryan", student.get_student_name_and_cohort)
   # end
 
   def test_talk()
@@ -47,6 +58,14 @@ class TestTeam < MiniTest::Test
     team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
     assert_equal("MR Juan", team.get_coach_name)
   end
+
+  def test_set_coach_name
+    team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
+    team.set_coach_name("MR John")
+    assert_equal("MR John", team.get_coach_name)
+  end
+
+
 
 
 

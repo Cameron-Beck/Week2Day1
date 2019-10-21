@@ -15,10 +15,15 @@ class Student
     return @cohort
   end
 
-  # def set_student_name_and_cohort(name)
-  #   return @name = name
-  # end
+  def set_student_name(name)
+    return @name = name
+  end
 
+  def set_student_cohort(cohort)
+    return @cohort = cohort
+  end
+
+  
   def talk()
      return "Hello my name is #{@name} and I'm in cohort #{@cohort}"
   end
@@ -50,5 +55,9 @@ class Team
 
   def get_coach_name
     return @coach
+  end
+
+  def set_coach_name(coach)
+    return @coach = coach
   end
 end
