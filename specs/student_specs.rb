@@ -46,23 +46,23 @@ class TestTeam < MiniTest::Test
 
   def test_get_team_name
     team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
-    assert_equal("Arsenal", team.get_team_name)
+    assert_equal("Arsenal", team.name)
   end
 
   def test_get_players_names
     team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
-    assert_equal(["henry", "john", "Kyle"], team.get_players_names)
+    assert_equal(["henry", "john", "Kyle"], team.players)
   end
 
   def test_get_coach_name
     team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
-    assert_equal("MR Juan", team.get_coach_name)
+    assert_equal("MR Juan", team.coach)
   end
 
   def test_set_coach_name
     team = Team.new("Arsenal", ["henry", "john", "Kyle"], "MR Juan")
-    team.set_coach_name("MR John")
-    assert_equal("MR John", team.get_coach_name)
+    team.coach = "MR John"
+    assert_equal("MR John", team.coach)
   end
 
 

@@ -23,7 +23,7 @@ class Student
     return @cohort = cohort
   end
 
-  
+
   def talk()
      return "Hello my name is #{@name} and I'm in cohort #{@cohort}"
   end
@@ -36,28 +36,28 @@ end
 
 class Team
 
-# attr_reader  :name, :players
-# attr_accessor :coach
+attr_reader :name, :players
+attr_accessor :coach
 
   def initialize(name, players, coach)
     @name = name
     @players = players
     @coach = coach
   end
-
-  def get_team_name
-    return @name
-  end
-
-  def get_players_names
-    return @players
-  end
-
-  def get_coach_name
-    return @coach
-  end
-
-  def set_coach_name(coach)
-    return @coach = coach
-  end
+#
+#   def get_team_name
+#     return @name
+#   end
+#
+#   def get_players_names
+#     return @players
+#   end
+#
+#   def get_coach_name
+#     return @coach
+#   end
+#
+#   def set_coach_name(coach)
+#     return @coach = coach
+#   end
 end
